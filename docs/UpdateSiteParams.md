@@ -1,0 +1,57 @@
+# UpdateSiteParams
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**oxd_id** | **str** |  | 
+**redirect_uris** | **list[str]** | Provide the list of redirection URIs. The first URL is where the user will be redirected after successful authorization at the OpenID Connect Provider (OP). | [optional] 
+**post_logout_redirect_uris** | **list[str]** |  | [optional] 
+**response_types** | **list[str]** |  | [optional] 
+**grant_types** | **list[str]** |  | [optional] 
+**scope** | **list[str]** |  | [optional] 
+**acr_values** | **list[str]** |  | [optional] 
+**client_jwks_uri** | **str** |  | [optional] 
+**client_token_endpoint_auth_method** | **str** |  | [optional] 
+**client_request_uris** | **list[str]** |  | [optional] 
+**client_sector_identifier_uri** | **str** |  | [optional] 
+**contacts** | **list[str]** |  | [optional] 
+**ui_locales** | **list[str]** |  | [optional] 
+**claims_locales** | **list[str]** |  | [optional] 
+**access_token_as_jwt** | **bool** | specifies whether access_token should be return as JWT or not. Default value is false. | [optional] 
+**access_token_signing_alg** | **str** | sets signing algorithm used for JWT signing. Valid values are none, HS256, HS384, HS512, RS256, RS384, RS512, ES256, ES384, ES512 | [optional] 
+**rpt_as_jwt** | **bool** | specifies whether RPT should be return as JWT or not. Default value is false. | [optional] 
+**claims_redirect_uri** | **list[str]** |  | [optional] 
+**client_token_endpoint_auth_signing_alg** | **str** | Provide the Requested Client Authentication method for the Token Endpoint. Valid values are none, HS256, HS384, HS512, RS256, RS384, RS512, ES256, ES384, ES512, PS256, PS384, PS512. | [optional] 
+**trusted_client** | **bool** | specifies whether client is trusted. Default value is false. | [optional] 
+**client_name** | **str** | oxd will generate its own non-human readable name by default if client_name is not specified | [optional] 
+**logo_uri** | **str** | specifies an URL that references a logo for the Client application. | [optional] 
+**client_uri** | **str** | specifies an URL of the home page of the Client. | [optional] 
+**policy_uri** | **str** | specifies an URL that the Relying Party Client provides to the End-User to read about the how the profile data will be used. | [optional] 
+**front_channel_logout_session_required** | **bool** | specifies if front channel logout session required. | [optional] 
+**tos_uri** | **str** | specifies an URL that the Relying Party Client provides to the End-User to read about the Relying Party&#39;s terms. | [optional] 
+**jwks** | **str** | Client&#39;s JSON Web Key Set (JWK) document, passed by value. The semantics of the jwks parameter are the same as the jwks_uri parameter, other than that the JWK Set is passed by value, rather than by reference. This parameter is intended only to be used by Clients that, for some reason, are unable to use the jwks_uri parameter, for instance, by native applications that might not have a location to host the contents of the JWK Set. If a Client can use jwks_uri, it must not use jwks. One significant downside of jwks is that it does not enable key rotation. The jwks_uri and jwks parameters must not be used together. | [optional] 
+**id_token_binding_cnf** | **str** |  | [optional] 
+**tls_client_auth_subject_dn** | **str** |  | [optional] 
+**run_introspection_script_beforeaccess_token_as_jwt_creation_and_include_claims** | **bool** | choose to run introspection script before access_token_as_jwt creation and include claims. | [optional] 
+**id_token_signed_response_alg** | **str** | choose the JWS alg algorithm (JWA) required for the ID Token issued to this client_id. Valid values are none, HS256, HS384, HS512, RS256, RS384, RS512, ES256, ES384, ES512, PS256, PS384, PS512 | [optional] 
+**id_token_encrypted_response_alg** | **str** | choose the JWE alg algorithm (JWA) required for encrypting the ID Token issued to this client_id. Valid values are RSA1_5, RSA-OAEP, A128KW, A256KW | [optional] 
+**id_token_encrypted_response_enc** | **str** | choose the JWE enc algorithm (JWA) required for symmetric encryption of the ID Token issued to this client_id. Valid values are A128CBC+HS256, A256CBC+HS512, A128GCM, A256GCM | [optional] 
+**user_info_signed_response_alg** | **str** | choose the JWS alg algorithm (JWA) required for UserInfo responses. Valid values are none, HS256, HS384, HS512, RS256, RS384, RS512, ES256, ES384, ES512, PS256, PS384, PS512 | [optional] 
+**user_info_encrypted_response_alg** | **str** | choose the JWE alg algorithm (JWA) required for encrypting UserInfo responses. Valid values are RSA1_5, RSA_OAEP, A128KW, A256KW | [optional] 
+**user_info_encrypted_response_enc** | **str** | choose the JWE enc algorithm (JWA) required for symmetric encryption of UserInfo responses. Valid values are A128CBC+HS256, A256CBC+HS512, A128GCM, A256GCM | [optional] 
+**request_object_signing_alg** | **str** | choose the JWS alg algorithm (JWA) that must be required by the Authorization Server. Valid values are none, HS256, HS384, HS512, RS256, RS384, RS512, ES256, ES384, ES512, PS256, PS384, PS512 | [optional] 
+**request_object_encryption_alg** | **str** | choose the JWE alg algorithm (JWA) the RP is declaring that it may use for encrypting Request Objects sent to the OP. Valid values are RSA1_5, RSA_OAEP, A128KW, A256KW | [optional] 
+**request_object_encryption_enc** | **str** | choose the JWE enc algorithm (JWA) the RP is declaring that it may use for encrypting Request Objects sent to the OP. Valid values are A128CBC+HS256, A256CBC+HS512, A128GCM, A256GCM | [optional] 
+**default_max_age** | **int** | specifies the Default Maximum Authentication Age. | [optional] 
+**require_auth_time** | **bool** | specifies the Boolean value specifying whether the auth_time claim in the id_token is required. It is required when the value is true. The auth_time claim request in the request object overrides this setting. | [optional] 
+**initiate_login_uri** | **str** | specifies the URI using the https scheme that the authorization server can call to initiate a login at the client. | [optional] 
+**authorized_origins** | **list[str]** | specifies authorized JavaScript origins. | [optional] 
+**access_token_lifetime** | **int** | specifies the Client-specific access token expiration. | [optional] 
+**software_id** | **str** | specifies a unique identifier string (UUID) assigned by the client developer or software publisher used by registration endpoints to identify the client software to be dynamically registered. | [optional] 
+**software_version** | **str** | specifies a version identifier string for the client software identified by &#39;software_id&#39;. The value of the &#39;software_version&#39; should change on any update to the client software identified by the same &#39;software_id&#39;. | [optional] 
+**software_statement** | **str** | specifies a software statement containing client metadata values about the client software as claims. This is a string value containing the entire signed JWT. | [optional] 
+**custom_attributes** | **dict(str, str)** | specifies custom attribute map copy. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
